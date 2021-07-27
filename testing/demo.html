@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="resume">Resume</button>
+</body>
+<script>
+    const playbtn = document.getElementById("play");
+    const pausebtn = document.getElementById("pause");
+    const resumebtn = document.getElementById("resume");
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.rate = 1;
+    playbtn.addEventListener("click" , ()=>{
+        utterance.text = "I am batman"
+        speechSynthesis.speak();
+    });
+    console.log(speechSynthesis);
+</script>
+</html>
