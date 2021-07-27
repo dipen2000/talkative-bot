@@ -10,7 +10,7 @@ const guestName = prompt("Can I know your name?");
 const utterance = new SpeechSynthesisUtterance();
 utterance.rate = 1;
 utterance.addEventListener("end" , ()=>{
-    
+
     playBtn.classList.add("active")
     resumeBtn.classList.remove("active");    
     textArea.disabled = false;    
@@ -46,7 +46,7 @@ introBtn.addEventListener("click",()=>{
     if(speechSynthesis.speaking){
         return;
     }
-    utterance.text = `Hello ${guestName}, I welcome you on behalf of Deepan.`
+    utterance.text = `Hello ${guestName}, I welcome you to the website and pardon me if i mis-spoke your name`
     speechSynthesis.speak(utterance);
 });
 
